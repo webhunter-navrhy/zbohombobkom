@@ -1,0 +1,55 @@
+{
+  "slug": "zbohombobkom",
+  "nazev": "Zbohom bobkom!",
+  "url": "https://webhunter-navrhy.github.io/zbohombobkom/",
+  "base": "/zbohombobkom/",
+  "lang": "sk",
+  "popis": "Profesionálny zber psích exkrementov zo záhrad a dvorov v Bratislave a okolí. Pravidelné čistenie aj jednorazový servis, od 56 € mesačne.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "foto1.webp",
+  "logo": "logo.png",
+  "theme_color": "#2d6e32",
+  "typ": "LocalBusiness",
+  "ico": "56474296",
+  "kontakt": {
+    "email": "info@zbohombobkom.sk",
+    "telefon": "+421 944 942 789",
+    "adresa": {
+      "ulice": "Ruženínová 11",
+      "psc": "821 06",
+      "mesto": "Bratislava",
+      "zeme": "SK"
+    }
+  },
+  "oteviraci_doba": [],
+  "sameas": [],
+  "cenove_rozpeti": "",
+  "formular": {
+    "endpoint": "",
+    "demo": true,
+    "predmet": "Nový dopyt – Zbohom bobkom"
+  },
+  "nav": [
+    {
+      "text": "Ako to funguje",
+      "href": "#postup"
+    },
+    {
+      "text": "Cenník",
+      "href": "#cennik"
+    },
+    {
+      "text": "Lokality",
+      "href": "#lokality"
+    },
+    {
+      "text": "Otázky",
+      "href": "#otazky"
+    },
+    {
+      "text": "Firmy a bytovky",
+      "href": "#firmy"
+    }
+  ]
+}

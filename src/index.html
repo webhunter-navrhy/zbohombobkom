@@ -1,0 +1,112 @@
+{% extends "_base.html" %}
+{% set titulek = 'Zbohom bobkom! | Zber psích exkrementov z dvorov a záhrad | Bratislava' %}
+{% set cesta = '' %}
+{% block obsah %}
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Zbavíme Váš dvor <em>psích bobkov</em></h1>
+      <p class="lead">Pravidelné aj jednorazové čistenie záhrad a dvorov v Bratislave a okolí. Diskrétne, spoľahlivo a bez starostí na Vašej strane.</p>
+      <div class="cta">
+        <a class="btn" href="#kontakt">Objednať čistenie</a>
+        <a class="btn obrys" href="#cennik">Pozrieť cenník</a>
+      </div>
+      <ul class="plusy">
+        <li>Prvé čistenie zadarmo</li>
+        <li>Jednotná cena bez príplatkov za dopravu</li>
+        <li>Fotka zatvorenej bráničky po každej návšteve</li>
+      </ul>
+    </div>
+    <div class="body-foto">{{ img('foto1.webp', 'Pracovník Zbohom bobkom čistí záhradu od psích exkrementov', sizes='(min-width: 56rem) 40vw, 100vw') }}</div>
+  </div>
+</section>
+
+<section class="sekce" id="postup">
+  <div class="wrap">
+    <h2>Ako to funguje</h2>
+    <p class="uvod">Doma byť nemusíte. Stačí odomknutá bránka a zabezpečený psík.</p>
+    <ol class="kroky">
+      <li><h3>Dohodneme termín</h3><p>Po objednávke si spolu dohodneme prvé čistenie. Všetko Vám potvrdíme e‑mailom.</p></li>
+      <li><h3>SMS pred príchodom</h3><p>30 až 60 minút pred príchodom Vám pošleme SMS, aby sme Vás neprekvapili.</p></li>
+      <li><h3>Vyzbierame a odnesieme</h3><p>Exkrementy zabalíme do dvoch vrstiev vriec a vložíme do Vášho kontajnera, alebo odvezieme mimo pozemok. Náradie dezinfikujeme.</p></li>
+      <li><h3>Fotka bráničky</h3><p>Do 3 minút od odchodu Vám pošleme fotku zatvorenej bráničky. Viete, že je hotovo a psík môže von.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sekce" style="padding-top:0">
+  <div class="wrap dvoj">
+    <div>
+      <h2>Bobky sa samé nevyzbierajú…</h2>
+      <p class="uvod" style="margin-bottom:var(--space-2)">Takto vyzerá čistenie dvora v praxi. Prídeme, vyzbierame, odnesieme, a Váš pes sa tvári, že s tým nemá nič spoločné.</p>
+      <p class="uvod">Pravidelné čistenie znamená zdravší a zelenší trávnik, záhradu bezpečnú pre deti a 2 až 4 hodiny voľného času pre Vás.</p>
+      <a class="btn zelene" href="#kontakt">Vypočítať cenu čistenia</a>
+    </div>
+    <div class="galeria">
+      {{ img('foto2.webp', 'Vyčistený dvor po návšteve Zbohom bobkom', sizes='30vw') }}
+      {{ img('foto3.webp', 'Pravidelný zber psích výkalov zo záhrady', sizes='30vw') }}
+      {{ img('foto4.webp', 'Zber psích exkrementov v záhrade', sizes='30vw') }}
+    </div>
+  </div>
+</section>
+
+<section class="sekce cennik" id="cennik">
+  <div class="wrap">
+    <h2>Cenník</h2>
+    <p class="uvod">Cena závisí od veľkosti pozemku a frekvencie čistenia, pravidelný servis začína od 56 € mesačne. Presnú sumu Vám pripraví kalkulačka na webe alebo individuálna ponuka.</p>
+    <div class="karty">
+      <div class="karta"><h3>Jednorazovo</h3><p>Hĺbkové vyčistenie celého pozemku vrátane zabudnutých kútov.</p></div>
+      <div class="karta top"><h3>Pravidelne</h3><p>Každý týždeň alebo každé 2 týždne, vždy v rovnaký deň a približne v rovnaký čas.</p><p class="cena">od 56 €/mes.</p></div>
+      <div class="karta"><h3>Ročne</h3><p>Pri ročnej platbe 5 % zľava.</p></div>
+    </div>
+    <p class="poznamka">Odvoz odpadu mimo pozemok je možné doobjednať podľa cenníka. Jednotná cena pre všetky lokality, bez príplatkov za dopravu.</p>
+  </div>
+</section>
+
+<section class="sekce" id="lokality">
+  <div class="wrap">
+    <h2>Kde poskytujeme služby</h2>
+    <p class="uvod">Celá Bratislava vrátane Rusoviec, Čunova, Jaroviec a Devínskej Novej Vsi a okolité obce.</p>
+    <ul class="lokality" role="list">
+      {% for m in ['Bratislava','Pezinok','Stupava','Modra','Senec','Malacky','Trnava','Rovinka','Dunajská Lužná','Ivanka pri Dunaji','Bernolákovo','Chorvátsky Grob','Kráľová pri Senci','Záhorská Bystrica'] %}<li>{{ m }}</li>{% endfor %}
+    </ul>
+    <p class="poznamka">Nie ste si istí, či prídeme aj k Vám? Zavolajte na <a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a> a hneď sa na to pozrieme.</p>
+  </div>
+</section>
+
+<section class="sekce faq" id="otazky" style="padding-top:0">
+  <div class="wrap">
+    <h2>Často kladené otázky</h2>
+    <details><summary>Musím byť počas čistenia doma?</summary><p>Vôbec nie. Stačí voľný prístup na pozemok (odomknutá bránka) a zabezpečený psík. O priebehu Vás informujeme SMS správou.</p></details>
+    <details><summary>Čistíte aj v zime a v daždi?</summary><p>Áno, psy kakajú celoročne a my čistíme celoročne. Termín posúvame len pri skutočne extrémnom počasí. Službu pozastavujeme len pri súvislej snehovej pokrývke, keď výkaly nie je vidieť.</p></details>
+    <details><summary>Používate dezinfekciu náradia?</summary><p>Áno. Pred každým zákazníkom náradie dôkladne dezinfikujeme prípravkom veterinárnej kvality, aby sme predišli prenosu parazitov a baktérií medzi pozemkami.</p></details>
+    <details><summary>Čo robíte s vyzbieraným odpadom?</summary><p>V základnej službe ho zabalíme do dvoch vrstiev vriec a uložíme do Vášho kontajnera na komunálny odpad. Ak si doobjednáte odvoz, odpad vezmeme so sebou a odovzdáme ho na zbernom dvore.</p></details>
+    <details><summary>Dostanem potvrdenie o vykonaní čistenia?</summary><p>Áno. Do 3 minút od opustenia pozemku Vám pošleme MMS s fotografiou zatvorenej bráničky.</p></details>
+    <details><summary>Koľko trvá jedno čistenie?</summary><p>Prvé čistenie trvá najdlhšie, spoznávame pozemok a miesta, kde sa Váš psík zdržiava. Pri pravidelnej údržbe sú ďalšie návštevy omnoho rýchlejšie.</p></details>
+  </div>
+</section>
+
+<section class="sekce firmy" id="firmy">
+  <div class="wrap">
+    <h2>Čistíme aj firemné areály, parky a vnútrobloky</h2>
+    <p class="uvod">Psie exkrementy kazia pohodu v parkoch a spôsobujú sťažnosti obyvateľov bytových domov. Starostlivosť o čistotu nechajte na nás.</p>
+    <ul role="list">
+      <li><strong>Vnútrobloky a rezidencie</strong>Pravidelné čistenie a monitoring trávnatých plôch bytových domov a parkov.</li>
+      <li><strong>Psie hotely a cvičiská</strong>Pravidelný zber a sanitácia kynologických cvičísk a psích výbehov.</li>
+      <li><strong>Externý servis na kľúč</strong>Zber a likvidácia, na požiadanie aj dodanie a osadenie košov na psie exkrementy.</li>
+    </ul>
+    <a class="btn" href="#kontakt">Požiadať o bezplatný audit</a>
+  </div>
+</section>
+
+<section class="sekce" id="kontakt">
+  <div class="wrap kontakt-box">
+    <div>
+      <h2>Objednajte si čistenie ešte dnes</h2>
+      <p class="uvod">O všetko sa postaráme my. Ozveme sa Vám do dvoch dní.</p>
+      <p><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></p>
+    </div>
+    <div>{% include "_formular.html" %}</div>
+  </div>
+</section>
+{% endblock %}
